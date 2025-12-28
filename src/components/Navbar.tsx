@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LogOut, Moon, Settings, User } from "lucide-react";
+import { LogOut, Moon, Settings, SquareMenu, User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import {
@@ -10,6 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
@@ -28,7 +29,7 @@ const Navbar = () => {
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="mr-4" sideOffset={10}>
+          <DropdownMenuContent sideOffset={10}>
             <DropdownMenuLabel>My Account</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
@@ -40,6 +41,22 @@ const Navbar = () => {
             <DropdownMenuItem variant="destructive">
               <LogOut /> Logout
             </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" size="icon">
+              <SquareMenu />
+              {/* sr-only sirf blind logo ke liye  */}
+              <span className="sr-only">open menu</span>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuItem>menu item 1</DropdownMenuItem>
+            <DropdownMenuItem>menu item 2</DropdownMenuItem>
+            <DropdownMenuItem>menu item 3</DropdownMenuItem>
+            <DropdownMenuItem>menu item 4</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
