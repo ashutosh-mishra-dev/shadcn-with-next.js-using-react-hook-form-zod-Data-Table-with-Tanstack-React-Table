@@ -14,13 +14,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
+import { SidebarTrigger } from "./ui/sidebar";
 
 const Navbar = () => {
   const { setTheme } = useTheme();
   return (
     <nav className="flex p-4 items-center justify-between">
       {/* Left Side */}
-      collaps button
+      <SidebarTrigger />
       {/* Right Side */}
       <div className="flex items-center gap-4 ">
         <Link href="/">Dashboard</Link>
@@ -50,7 +51,8 @@ const Navbar = () => {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
+              {/* <AvatarImage src="https://github.com/shadcn.png" /> */}
+              <AvatarImage src="/hanuman.jpg" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
           </DropdownMenuTrigger>
