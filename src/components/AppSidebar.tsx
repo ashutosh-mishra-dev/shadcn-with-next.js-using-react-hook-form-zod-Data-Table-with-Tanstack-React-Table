@@ -35,7 +35,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@radix-ui/react-dropdown-menu";
+} from "./ui/dropdown-menu";
 import {
   Collapsible,
   CollapsibleContent,
