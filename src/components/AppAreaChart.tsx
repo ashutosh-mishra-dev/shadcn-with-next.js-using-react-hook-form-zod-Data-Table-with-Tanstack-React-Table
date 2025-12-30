@@ -13,11 +13,11 @@ import {
 const chartConfig = {
   desktop: {
     label: "Desktop",
-    color: "var(--chart-1)",
+    color: "var(--chart-5)",
   },
   mobile: {
     label: "Mobile",
-    color: "var(--chart-4)",
+    color: "var(--chart-1)",
   },
 } satisfies ChartConfig;
 
