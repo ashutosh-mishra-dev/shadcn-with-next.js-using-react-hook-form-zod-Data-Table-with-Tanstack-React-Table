@@ -1,5 +1,7 @@
 import CardList from "@/components/CardList";
+
 import { Badge } from "@/components/ui/badge";
+
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,13 +10,21 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+
 import { Progress } from "@/components/ui/progress";
+
 import { BadgeCent, Candy, Citrus, Shield } from "lucide-react";
+
+import { Sheet, SheetTrigger } from "@/components/ui/sheet";
+
+import { Button } from "@/components/ui/button";
+import EditUser from "@/components/EditUser";
 
 const SingleUserPage = () => {
   return (
@@ -40,7 +50,15 @@ const SingleUserPage = () => {
         <div className="w-full xl:w-1/3 space-y-6">
           {/* USER BADGES CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            <h1 className="text-xl font-semibold">User Badges</h1>
+            <div className="flex items-center justify-between">
+              <h1 className="text-xl font-semibold">User Badges</h1>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button>Edit User</Button>
+                </SheetTrigger>
+                <EditUser />
+              </Sheet>
+            </div>
             <div className="flex gap-4 mt-4">
               <HoverCard>
                 <HoverCardTrigger>
