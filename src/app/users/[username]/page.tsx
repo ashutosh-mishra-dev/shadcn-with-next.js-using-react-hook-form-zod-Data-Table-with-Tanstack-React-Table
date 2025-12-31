@@ -50,15 +50,8 @@ const SingleUserPage = () => {
         <div className="w-full xl:w-1/3 space-y-6">
           {/* USER BADGES CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <h1 className="text-xl font-semibold">User Badges</h1>
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button>Edit User</Button>
-                </SheetTrigger>
-                <EditUser />
-              </Sheet>
-            </div>
+            <h1 className="text-xl font-semibold">User Badges</h1>
+
             <div className="flex gap-4 mt-4">
               <HoverCard>
                 <HoverCardTrigger>
@@ -121,7 +114,15 @@ const SingleUserPage = () => {
           </div>
           {/* INFORMATION CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            <h1 className="text-xl font-semibold">User Information</h1>
+            <div className="flex items-center justify-between">
+              <h1 className="text-xl font-semibold">User Information</h1>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button>Edit User</Button>
+                </SheetTrigger>
+                <EditUser />
+              </Sheet>
+            </div>
             <div className="space-y-4 mt-4">
               <div className="flex flex-col gap-2 mb-8">
                 <p className="text-sm text-muted-foreground">
